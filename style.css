@@ -80,28 +80,31 @@ gap: 1vw;
     }
     #para{
         flex-wrap: wrap;
-        gap: 1vw;
+        gap: 2.5vw;
         margin-top: 7vw;
-        
+        background-color: #c21313;
         align-items: flex-start;
         justify-content: flex-start;
         margin-left: 4vw;
+        margin-right: 3vw;
     }
   #para p{
-    font-size: 4vw;
+    font-size: 4.5vw;
     flex-wrap: wrap;
     flex-shrink: 0;
     
   }
   #page1 h4{
-    font-size: 4vw;
+    font-size: 4.2vw;
     margin-bottom: 7vw;
+    background-color: aqua;
   }
   #page1 h2{
     margin-right: 3vw;
     margin-left: 5vw;
     font-size: 10vw;
     line-height: 12vw;
+    background: #c21313;
     
     
   }
