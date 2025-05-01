@@ -2,12 +2,13 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box; 
-color : white;
+color : #FFFFFF;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 html,body {
 height: 100%;
 width: 100%;
+
 }
 
 #page1{
@@ -18,21 +19,49 @@ width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
     
-}
-#page1 h1{
-    font-size: 8vw;
-    font-weight: 900;
-    line-height: 8vw;
-}
-#page1 h1 span{
-    
-    border-radius: 50%;
-    background-color: green;
-    padding: 2px 20px;
-    font-size: 5.5vw;
+   
 
+    
+}
+#page1 h2{
+    font-size: 6vw;
+    font-weight: 1000;
+    line-height: 7vw;
+    
+    margin-left: 15vw;
+    margin-right: 13vw;
+    
+}
+#page1 h4{
+font-size: 1.5vw;
+color: #F5F5F5;
+
+margin-bottom: 2vw;
+}
+
+#para{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 5vw;
+gap: 1vw;
+
+
+
+
+}
+#para p{
+    font-size: 1.3vw;
+    font-weight: 700;
+    
+    
+}
+ .white{
+    color: #f4f4f4;
+}
+ .green{
+    color: green;
 }
 
 #page2{
@@ -41,13 +70,39 @@ width: 100%;
     background: #111;
 }
 
-@media (max-width : 700px){
-    #page1 h1{
+
+@media (max-width : 870px){
+    
+    #page1 h2{
         font-size: 9vw;
-        line-height: 9vw;
         font-weight: 900;
+      line-height: 9vw;
     }
-    #page1 h1 span{
-        padding: 2px 6px;
+    #para{
+        flex-wrap: wrap;
+        gap: 1vw;
+        margin-top: 7vw;
+        
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 4vw;
     }
+  #para p{
+    font-size: 4vw;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    
+  }
+  #page1 h4{
+    font-size: 4vw;
+    margin-bottom: 7vw;
+  }
+  #page1 h2{
+    margin-right: 3vw;
+    margin-left: 5vw;
+    font-size: 10vw;
+    line-height: 12vw;
+    
+    
+  }
 }
