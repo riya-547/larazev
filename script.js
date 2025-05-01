@@ -35,3 +35,14 @@ cross.addEventListener("click", function(){
     tl.reverse()
  })
  
+ var navbtn = document.querySelector("nav button")
+
+ navbtn.addEventListener("mouseenter", function(){
+   navbtn.style.color = "black"
+   navbtn.style.backgroundColor = "white"
+ })
+ navbtn.addEventListener("mouseleave", function(){
+   navbtn.style.color = "white"
+   navbtn.style.backgroundColor = "green"
+ })
+ 
