@@ -10,6 +10,61 @@ height: 100%;
 width: 100%;
 
 }
+nav{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1vw 10vw;
+}
+nav h1 {
+  font-size: 2vw;
+  font-weight: 900;
+  
+}
+.nav-part2{
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  
+}
+.nav-part2{
+  font-size: 0.7vw;
+  text-transform: uppercase;
+  letter-spacing: 0.08vw;
+  font-weight: 600;
+}
+
+nav button{
+  background-color: green;
+  padding: 1vw 2vw;
+  border-radius: 50px;
+  font-size: 1vw;
+  
+}
+#nav-bottom{
+  height: 0%;
+  width: 80%;
+  bottom: 0%;
+  
+  position: absolute;
+  border-bottom: 1px solid #dadada;
+  
+  transition: all ease 0.65s;
+}
+nav:hover #nav-bottom{
+  height: 100%;
+  bottom: -100%;
+} 
+nav i{
+  display: none;
+}
+nav i:hover{
+  color: green;
+}
+
+
 
 #page1{
     height: 100vh;
@@ -19,15 +74,11 @@ width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
-   
-
-    
-}
+    }
 #page1 h2{
     font-size: 6vw;
     font-weight: 1000;
-    line-height: 7vw;
+    line-height: 6.4vw;
     
     margin-left: 15vw;
     margin-right: 13vw;
@@ -38,6 +89,7 @@ font-size: 1.5vw;
 color: #F5F5F5;
 
 margin-bottom: 2vw;
+
 }
 
 #para{
@@ -63,7 +115,40 @@ gap: 1vw;
  .green{
     color: green;
 }
+#resnav{
+  height: 100%;
+  width: 100%;
+ background-color: #111;
+  position: absolute;
+  display: none;
+  top: 0;
+  padding: 12vw 10vw;
+  }
+  #resnav h4{
+      margin-bottom: 4vw;
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 8vw;
+  }
 
+  #resnav i{
+      position: absolute;
+      top: 2vw;
+      right: 4vw;
+      font-size: 40px;
+      color: white;
+  }
+  #resnav button{
+      padding: 03vw 6vw;
+    
+      border-radius: 3vw;
+      font-size: 4vw;
+      border: 2px solid black;
+  }
+  #resnav h4:hover{
+      color: green;
+  }
+ 
 #page2{
     height: 100vh;
     width: 100%;
@@ -89,13 +174,13 @@ gap: 1vw;
         margin-right: 3vw;
     }
   #para p{
-    font-size: 4.5vw;
+    font-size: 4vw;
     flex-wrap: wrap;
     flex-shrink: 0;
     
   }
   #page1 h4{
-    font-size: 4.5vw;
+    font-size: 4vw;
     margin-bottom: 7vw;
     
   }
@@ -104,8 +189,27 @@ gap: 1vw;
     margin-left: 5vw;
     font-size: 10vw;
     line-height: 12vw;
+
     
     
-    
+  }
+  .nav-part2{
+display: none;
+  } 
+  nav i{
+    display: block;
+  }
+  nav button{
+    position: absolute;
+    left: 75%;
+  }
+  nav{
+    padding: 2vw 3vw;
+  }
+ #nav-bottom{
+    display: none;
+  }
+  nav h1{
+    font-size: 2vw;
   }
 }
