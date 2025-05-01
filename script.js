@@ -11,7 +11,7 @@ function resnavanimation(){
        right: "0%",
        duration: 0.6,
     })
-    tl.from("#resnav h4 , #resnav button",{
+    tl.from("#resnav h3 , #resnav button",{
       x:150,
       duration:0.6,
       
@@ -91,4 +91,4 @@ tl.to(".nav-bottom",{
 })
   })
 }
-navAnimation();
+//navAnimation();
