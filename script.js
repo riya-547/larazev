@@ -8,7 +8,6 @@ function resnavanimation(){
    
    
    tl.to("#resnav", {
-       right: "0%",
        duration: 0.6,
     })
     tl.from("#resnav h3 , #resnav button",{

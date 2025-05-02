@@ -23,6 +23,7 @@ nav{
   background-color: #111;
   
 }
+
 nav h1 {
   font-size: 2vw;
   font-weight: 900;
@@ -138,14 +139,14 @@ gap: 1vw;
     color: green;
 }
 #resnav{
-  
+  position: fixed;
   z-index: 11;
   height: 100%;
   width: 100%;
  background-color: #111;
-  position: absolute;
+
   display: none;
-  top: 0;
+  
   padding: 12vw 10vw;
   }
   #resnav h3{
@@ -153,19 +154,15 @@ gap: 1vw;
       font-size: 30px;
       font-weight: 800;
       margin-bottom: 8vw;
-      
-    
-     
-  }
-
-  #resnav i{
+}
+#resnav i{
       position: absolute;
       top: 2vw;
       right: 4vw;
       font-size: 40px;
       color: white;
   }
-  #resnav button{
+#resnav button{
       padding: 03vw 6vw;
     
       border-radius: 3vw;
@@ -174,6 +171,7 @@ gap: 1vw;
   }
   #resnav h3:hover{
       color: green;
+      padding-bottom: 3vw;
       border-bottom: 1px solid #dadada;
   }
 
@@ -317,7 +315,7 @@ font-weight: 400;
     #para{
         flex-wrap: wrap;
         gap: 2.5vw;
-        margin-top: 3vw;
+        margin-top: 6vw;
         
         align-items: flex-start;
         justify-content: flex-start;
@@ -349,7 +347,9 @@ font-weight: 400;
     font-size: 15vw;
     line-height: 15vw;
     position: absolute;
-    top:22%
+    top:22%;
+    margin-top: 2vw;
+    
 }
 
 
@@ -382,18 +382,22 @@ display: none;
     width: 70%;
   }
   #moving-div .move img{
-    height: 3vw;
+    height: 5vw;
   }
   #page2{
 flex-direction: column;
 background-color: #111;
 z-index: 9;
+
+
   }
   #page2-left{
-    height: 40%;
+    height: 35%;
     width: 100%;
     background-color: #111;
     padding: 4vw 4vw;
+    border-bottom: 0.4px solid #dadada30;
+    padding-bottom: 6vw;
     
   }
   #page2-left p {
@@ -404,7 +408,7 @@ z-index: 9;
     font-weight: 400;
   }
   #page2-right{
-    height: 50%;
+    height: 60%;
     width: 100%;
     padding: 4vw 4vw;
   }
@@ -415,6 +419,10 @@ padding-top: 1vw;
   }
   .right-elem img{
     display: none;
+  }
+  .right-elem h2:hover{
+    color: green;
+    
   }
 }
 
