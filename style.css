@@ -10,6 +10,7 @@ height: 100%;
 width: 100%;
 
 }
+
 nav{
   position: fixed;
   display: flex;
@@ -229,31 +230,79 @@ gap: 1vw;
     z-index: 2;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 #page2{
     height: 100vh;
     width: 100%;
-    background: #111;
+    background-color: #111;
+    padding: 0vw 10vw;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8vw;
+    border-top: 0.4px solid #dadada30;
+    
+}
+#page2-left{
+  height: 100%;
+  width: 40%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3vw 0;
+  
+  align-items: flex-start;
+  
+}
+#page2-left p{
+  font-size: 1vw;
+  font-weight: 300;
+}
+
+#page2-left h5{
+  font-size: 1vw;
+font-weight: 400;
+width: 70%;
+
+}
+#page2-right{
+  height: 100%;
+  width: 50%;
+  
+  
+ 
+}
+.right-elem{
+ position: relative;
+ border-bottom: 0.4px;
+ padding-top: 2vw;
+ padding-bottom: 4vw;
+ border-bottom: 0.4px solid #dadada30;
+  
+}
+.right-elem h2 {
+font-size: 1.4vw;
+font-weight: 400;
+}
+.right-elem img{
+  height: 5vw;
+  width: 5vw;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+
 }
 
 
-@media (max-width : 870px){
+#page3{
+  height: 100vh;
+  width: 100%;
+  background: #111;
+}
+
+@media (max-width : 400px){
   #page1{
     padding: 2vw;
     
@@ -268,7 +317,7 @@ gap: 1vw;
     #para{
         flex-wrap: wrap;
         gap: 2.5vw;
-        margin-top: 7vw;
+        margin-top: 3vw;
         
         align-items: flex-start;
         justify-content: flex-start;
@@ -320,6 +369,7 @@ display: none;
   }
   nav{
     padding: 3vw 4vw;
+    height: 6vh;
   }
  .nav-bottom{
     display: none;
@@ -333,6 +383,38 @@ display: none;
   }
   #moving-div .move img{
     height: 3vw;
+  }
+  #page2{
+flex-direction: column;
+background-color: #111;
+z-index: 9;
+  }
+  #page2-left{
+    height: 40%;
+    width: 100%;
+    background-color: #111;
+    padding: 4vw 4vw;
+    
+  }
+  #page2-left p {
+    font-size: 5vw;
+  }
+  #page2-left h5 {
+    font-size: 3.5vw;
+    font-weight: 400;
+  }
+  #page2-right{
+    height: 50%;
+    width: 100%;
+    padding: 4vw 4vw;
+  }
+  .right-elem h2{
+font-size: 5vw;
+padding-bottom: 4vw;
+padding-top: 1vw;
+  }
+  .right-elem img{
+    display: none;
   }
 }
 
