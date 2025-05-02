@@ -292,14 +292,125 @@ font-weight: 400;
   opacity: 0;
 
 }
-
-
-#page3{
+#page3 {
   height: 100vh;
   width: 100%;
-  background: #111;
+  background-color: #111;
+  position: relative;
+  background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page3-center{
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page3-center .icon{
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  
+  padding: 3.3vw;
+}
+.iconnn i {
+  color: white;
+  font-size: 5vw;
+}
+.page3-center h5{
+  opacity: 0;
+  font-weight: 700;
+  background-color: #f4f4f4;
+  color: #111;
+  margin-top: 0.7vw;
+  padding: 12px 26px 10px 26px;
+  transform: translateY(16%);
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: all ease 0.5s;
 }
 
+.page3-center:hover h5{
+  opacity: 1;
+  transform: translateY(0%);
+}
+#page3 video {
+  height: -200%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  transform: scaleX(0.7) scaleY(0);
+ border-radius: 30px;
+ z-index: 99999;
+ }
+
+
+#try{
+  height: 100vh;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 7vw 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#try-left{
+  height: 100%;
+  width: 50%;
+  font-size: 1.6vw;
+  font-weight: 900;
+  padding: 2vw 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#try-left h2{
+  color: #111;
+}
+#try-right{
+  height: 100%;
+  width: 50%;
+  border-bottom: 0.4px solid #1111115c;
+  padding: 1vw 0;
+  
+}
+#try-right p{
+  color: #111;
+  margin-top: 1vw;
+  font-size: 1.2vw;
+}
+#try-right h6{
+  color: green;
+}
+ #just{
+  margin-top: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#page4{
+  height: 100vh;
+  width: 100%;
+  background-color: #111;
+}
 @media (max-width : 400px){
   #page1{
     padding: 2vw;
@@ -359,6 +470,7 @@ display: none;
   nav i{
     display: block;
     font-size: 7vw;
+    color: white;
   }
   nav button{
     position: absolute;
@@ -423,6 +535,31 @@ padding-top: 1vw;
   .right-elem h2:hover{
     color: green;
     
+  }
+  #try{
+    flex-direction: column;
+  }
+  #try-left{
+    height: 35%;
+    width: 100%;
+    border-bottom: 0.4px solid #47444430;
+    padding: 3vw 0;
+  }
+  #try-left h2{
+    font-size: 10vw;
+  
+  }
+  #try-right{
+    height: 60%;
+    width: 100%;
+    padding: 1vw 0;
+    border-bottom: 0.4px solid #47444430;
+    
+  }
+  #try-right p{
+    font-size: 3.5vw;
+    width: 80%;
+    margin-top: 4vw;
   }
 }
 
