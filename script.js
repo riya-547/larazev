@@ -111,7 +111,7 @@ tl.to(".nav-bottom",{
 })
   })
 }
-//navAnimation();
+navAnimation();
 
  function page2Animation(){
    var rightElems = document.querySelectorAll(".right-elem")
