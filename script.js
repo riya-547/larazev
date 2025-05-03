@@ -1,4 +1,29 @@
+function startingPageAnimation(){
+   var page1 = document.querySelector("#page1")
+var tl = gsap.timeline();
+
+tl.from("nav h1 ,nav .nav-part2 .nav-div-bottom , nav button , nav .nav-bottom , nav i", {
+   y: -50,
+   opacity: 0,
+   delay: 0.2,
+   duration: 0.4,
+   stagger: 0.2
+});
+
+gsap.from("#page1 h2 , #page1 h4 , #page1 #para p , #page1 #moving-div",{
+   y: 50,
+   opacity: 0,
+   delay: 0.2,
+   duration: 0.4,
+   stagger: 0.2
+});
+}
+startingPageAnimation();
+
+
+
 function resnavanimation(){
+
    var renav = document.querySelector("#resnav")
 
    var cross = document.querySelector("#resnav i")
@@ -22,17 +47,14 @@ function resnavanimation(){
       opacity:0
    })
     tl.pause()
-   
-   
-   
    menu.addEventListener("click", function(){
       renav.style.display = "block" 
       tl.play()
    })
    cross.addEventListener("click", function(){
+      tl.reverse()
       renav.style.display = "none" 
       
-       tl.reverse()
     })
     
     var navbtn = document.querySelector("nav button")
@@ -65,7 +87,7 @@ tl.to(".nav-part2 h5 span",{
    y:0,
    
    stagger:{
-      amount:0.6
+      amount:0.2
    }
 
 })
@@ -89,7 +111,7 @@ tl.to(".nav-bottom",{
 })
   })
 }
-navAnimation();
+//navAnimation();
 
  function page2Animation(){
    var rightElems = document.querySelectorAll(".right-elem")
@@ -119,27 +141,53 @@ navAnimation();
  }
 page2Animation()
 
-
 function page3VideoAnimation() {
-   var page3Center = document.querySelector(".page3-center")
-   var video = document.querySelector("#page3 video")
+   var page3Center = document.querySelector(".page3-center");
+   var video = document.querySelector("#page3 video");
+   var isVideoOpen = false;
+
+   // Pehle video ko initial state pr le aao (hidden)
+ 
 
    page3Center.addEventListener("click", function () {
-       video.play()
-       gsap.to(video, {
-           transform: "scaleX(1) scaleY(1)",
-           opacity: 1,
-           borderRadius: 0
-       })
-   })
+       if (!isVideoOpen) {
+           video.style.pointerEvents = "auto";
+           video.style.display = "block";
+           video.currentTime = 0;
+           video.play();
+
+           gsap.to(video, {
+               transform: "scaleX(1) scaleY(1)",
+               opacity: 1,
+               borderRadius: 0,
+               duration: 0.5
+           });
+           isVideoOpen = true;
+       }
+   });
+
    video.addEventListener("click", function () {
-       video.pause()
-       gsap.to(video, {
-           transform: "scaleX(0.7) scaleY(0)",
-           opacity: 0,
-           borderRadius: "30px"
-       })
-   })
+       if (isVideoOpen) {
+           gsap.to(video, {
+               transform: "scaleX(0.7) scaleY(0)",
+               opacity: 0,
+               borderRadius: "30px",
+               duration: 0.5,
+               onComplete: function () {
+                   video.pause();
+                   video.currentTime = 0;
+                   video.style.pointerEvents = "none";
+                   video.style.display = "none";
+                   isVideoOpen = false;  // Important! Flag reset karo on complete pr
+               }
+           });
+       }
+   });
 }
-page3VideoAnimation()
+
+page3VideoAnimation();
+
+
+
+
 
