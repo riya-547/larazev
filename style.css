@@ -279,6 +279,9 @@ width: 70%;
  border-bottom: 0.4px solid #dadada30;
   
 }
+.right-elem:hover{
+  border-bottom: 1px solid white;
+}
 .right-elem h2 {
 font-size: 1.4vw;
 font-weight: 400;
@@ -617,19 +620,19 @@ summary::marker{
       border-right: 1px solid #dadada;
     width: 30%;
     /* background-color: red; */
-    height: 100%;
+    
 }
 #page6-btm-part3{
       border-right: 1px solid #dadada;
     width: 30%;
     /* background-color: red; */
-    height: 100%;
+  
 }
 #page6-btm-part4{
       border-right: 1px solid #dadada;
     width: 30%;
     /* background-color: red; */
-    height: 100%;
+    
 }
 #page6-btm-part5{
       

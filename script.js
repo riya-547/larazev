@@ -1,27 +1,58 @@
-function startingPageAnimation(){
-   var page1 = document.querySelector("#page1")
-var tl = gsap.timeline();
+function locomotiveAnimaiton(){
+   gsap.registerPlugin(ScrollTrigger);
 
-tl.from("nav h1 ,nav .nav-part2 .nav-div-bottom , nav button , nav .nav-bottom , nav i", {
-   y: -50,
-   opacity: 0,
-   delay: 0.2,
-   duration: 0.4,
-   stagger: 0.2
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector("#main"),
+  smooth: true,
+tablet: { smooth: true },
+  smartphone: { smooth: true }
 });
-
-gsap.from("#page1 h2 , #page1 h4 , #page1 #para p , #page1 #moving-div",{
-   y: 50,
-   opacity: 0,
-   delay: 0.2,
-   duration: 0.4,
-   stagger: 0.2
+locoScroll.on("scroll", ScrollTrigger.update);
+ScrollTrigger.scrollerProxy("#main", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  }
 });
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+ScrollTrigger.refresh();
 }
-startingPageAnimation();
 
+locomotiveAnimaiton();
 
-
+function loadingAnimation() {
+    var tl = gsap.timeline()
+    tl.from("#page1", {
+        opacity: 0,
+        duration: 0.2,
+        delay: 0.2
+    })
+    tl.from("#page1", {
+        transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
+        borderRadius: "150px",
+        duration: 2,
+        ease: "expo.out"
+    })
+    tl.from("nav", {
+        opacity: 0,
+        delay: -0.2
+    })
+    tl.from("#page1 h4, #page1 h2, #page1 div", {
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.2
+    })
+}
+loadingAnimation();
 function resnavanimation(){
 
    var renav = document.querySelector("#resnav")
@@ -186,6 +217,7 @@ function page3VideoAnimation() {
 }
 
 page3VideoAnimation();
+
 function page6Animation(){
    
 gsap.from(".btm-page6-content h4",{
@@ -193,7 +225,7 @@ gsap.from(".btm-page6-content h4",{
    duration:1,
    scrollTrigger:{
       trigger : ".btm-page6-content",
-      scroller : "body",
+      scroller : "#main",
      // markers:true,
       start : "top 70%",
       end: "top 10%",
