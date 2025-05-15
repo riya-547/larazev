@@ -186,8 +186,23 @@ function page3VideoAnimation() {
 }
 
 page3VideoAnimation();
+function page6Animation(){
+   
+gsap.from(".btm-page6-content h4",{
+   x:0,
+   duration:1,
+   scrollTrigger:{
+      trigger : ".btm-page6-content",
+      scroller : "body",
+     // markers:true,
+      start : "top 70%",
+      end: "top 10%",
+      scrub: true,
+
+   }
 
 
-
-
-
+   
+})
+}
+page6Animation();
