@@ -227,7 +227,7 @@ gsap.from(".btm-page6-content h4",{
       trigger : ".btm-page6-content",
       scroller : "#main",
      // markers:true,
-      start : "top 70%",
+      start : "top 100%",
       end: "top 10%",
       scrub: true,
 
